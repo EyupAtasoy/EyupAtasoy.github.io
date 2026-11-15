@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Eyüp Enes Atasoy · AI Creative & Performance</title>
+<meta name="description" content="Eyüp Enes Atasoy: film and product imagery made with AI, Meta Ads performance work and marketing automation.">
+<script>document.documentElement.classList.add('js')</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap">
+<style>
+:root{
+  --bg:#0e0d0c; --surface:#171513; --ink:#efe9e1; --muted:#b1a89c; --rule:#2e2a26;
+  --accent:#d9a35b; --good:#7cc4a4; --bad:#e0805a;
+  --f-display:"Fraunces",Georgia,serif; --f-body:"Inter",system-ui,sans-serif; --f-mono:"JetBrains Mono",ui-monospace,monospace;
+  --gap:clamp(72px,10vw,136px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.65 var(--f-body);-webkit-font-smoothing:antialiased}
+body.lock{overflow:hidden}
+img,video{display:block;max-width:100%;height:auto}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,[tabindex]:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.wrap{max-width:1120px;margin:0 auto;padding-inline:max(16px,4vw)}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;line-height:1.08;margin:0;text-wrap:balance}
+h1{font-size:clamp(2.3rem,6.2vw,4.8rem);letter-spacing:-.02em}
+h2{font-size:clamp(1.8rem,4vw,2.8rem);letter-spacing:-.01em}
+h3{font-size:1.2rem}
+p{margin:0;max-width:62ch}
+.eyebrow{font:500 .75rem/1.4 var(--f-mono);letter-spacing:.14em;text-transform:uppercase;color:var(--accent)}
+.muted{color:var(--muted)}
+.note{font-size:.88rem;color:var(--muted)}
+
+/* nav */
+nav{position:sticky;top:0;z-index:5;background:rgb(14 13 12 / .85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
+nav .wrap{display:flex;gap:20px;align-items:center;justify-content:space-between;height:56px;font-size:.9rem}
+nav .links{display:flex;gap:18px;overflow-x:auto;scrollbar-width:none;padding:6px;margin:-6px}
+nav .links::-webkit-scrollbar{display:none}
+nav a{color:var(--muted);text-decoration:none;white-space:nowrap}
+nav a:hover{color:var(--ink)}
+@media (max-width:720px){nav strong{flex:none}nav .wrap{height:auto;min-height:56px;padding-block:8px}nav .links{flex-wrap:wrap;row-gap:2px;overflow:visible}html{scroll-padding-top:88px}}
+@media (max-width:560px){nav strong{display:none}nav .wrap{justify-content:flex-start}}
+
+/* hero */
+.hero{position:relative;min-height:86vh;display:grid;align-items:end;overflow:hidden}
+.hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.5;animation:drift 24s ease-in-out infinite alternate}
+@keyframes drift{from{transform:scale(1.02)}to{transform:scale(1.1) translate(-1%,-1%)}}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgb(14 13 12 / .4) 0%,rgb(14 13 12 / .4) 30%,var(--bg) 96%)}
+.hero .wrap{position:relative;z-index:1;padding-bottom:clamp(40px,8vh,88px);display:grid;gap:22px}
+.hero .lede{font-size:clamp(1.05rem,1.6vw,1.22rem);color:#ddd5ca}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chips span{font:500 .78rem var(--f-mono);border:1px solid var(--rule);background:rgb(23 21 19 / .75);padding:6px 10px;border-radius:999px;color:#ddd5ca}
+.cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;padding:12px 18px;border-radius:6px;text-decoration:none;font-weight:600;border:1px solid var(--accent);transition:background .2s,color .2s}
+.btn.primary{background:var(--accent);color:#1a140c}
+.btn:hover{background:transparent;color:var(--accent)}
+.btn.primary:hover{background:#e6b778;color:#1a140c}
+
+/* sections */
+section{padding-top:var(--gap)}
+.head{display:grid;gap:14px;margin-bottom:28px}
+.sub{margin-top:clamp(56px,7vw,88px)}
+.reel{margin:0 0 10px;display:grid;gap:8px}
+.reel video{width:100%;border-radius:6px;background:#000;box-shadow:0 20px 60px rgb(0 0 0 / .5)}
+.reel figcaption{font-size:.85rem;color:var(--muted)}
+.film{display:grid;grid-template-columns:repeat(12,1fr);gap:10px}
+.film figure{margin:0;overflow:hidden;border-radius:4px;background:var(--surface);cursor:zoom-in}
+.film img{width:100%;height:100%;object-fit:cover;transition:transform .6s cubic-bezier(.16,1,.3,1)}
+.film figure:hover img{transform:scale(1.04)}
+.f1{grid-column:span 8;grid-row:span 2}.f2,.f3{grid-column:span 4}
+.f4,.f5,.f6{grid-column:span 4}
+.f7,.f8{grid-column:span 6}
+@media (max-width:720px){.film figure{grid-column:span 12!important;grid-row:auto!important}}
+.after{margin-top:14px}
+
+/* product switcher */
+.swap{display:grid;gap:12px}
+.swap-tabs{display:flex;flex-wrap:wrap;gap:8px}
+.swap-tabs button{font:500 .85rem var(--f-body);color:var(--muted);background:var(--surface);border:1px solid var(--rule);border-radius:999px;padding:8px 16px;cursor:pointer;transition:color .2s,border-color .2s,background .2s}
+.swap-tabs button:hover{color:var(--ink);border-color:var(--muted)}
+.swap-tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:#1a140c}
+.swap-stage{position:relative;aspect-ratio:1400/782;border-radius:6px;overflow:hidden;background:var(--surface)}
+.swap-stage img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:0;transform:scale(1.03);transition:opacity .7s cubic-bezier(.16,1,.3,1),transform 1.2s cubic-bezier(.16,1,.3,1)}
+.swap-stage img.on{opacity:1;transform:scale(1)}
+.principles{display:flex;flex-wrap:wrap;gap:10px 28px;margin-top:clamp(40px,5vw,64px);padding-top:18px;border-top:1px solid var(--rule);font-size:.95rem;color:var(--muted)}
+.principles b{color:var(--ink);font-weight:600}
+
+/* ads */
+.stats{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:18px}
+.stat{border-top:3px solid var(--ink);padding-top:10px;display:grid;gap:4px}
+.stat b{font:500 clamp(1.7rem,3.6vw,2.4rem)/1.05 var(--f-mono);font-variant-numeric:tabular-nums}
+.stat.bad{border-color:var(--bad)}.stat.bad b{color:var(--bad)}
+.stat.good{border-color:var(--good)}.stat.good b{color:var(--good)}
+.stat small{color:var(--muted);font-size:.86rem}
+.bars{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:22px;display:grid;gap:14px;margin-top:28px}
+.bar{display:grid;gap:6px}
+.bar .lab{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;font-size:.92rem}
+.track{height:26px;background:var(--bg);border-radius:3px;overflow:hidden}
+.fill{height:100%;display:flex;align-items:center;justify-content:flex-end;padding-right:8px;font:500 .8rem var(--f-mono);color:#120f0c}
+.fill.bad{background:var(--bad)}.fill.good{background:var(--good)}
+.points{margin:28px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.points li{display:grid;grid-template-columns:14px minmax(0,1fr);gap:12px;max-width:72ch}
+.points li::before{content:"";width:8px;height:8px;margin-top:.55em;border-radius:50%;background:var(--accent)}
+.cards{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin-top:16px}
+@media (max-width:720px){.cards{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.cards img{border-radius:4px;border:1px solid var(--rule)}
+
+/* automation */
+.tool{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.tool div{background:var(--surface);border:1px solid var(--rule);border-radius:8px;padding:18px;display:grid;gap:6px;align-content:start}
+
+/* game */
+.game{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:28px;align-items:center}
+.game video{width:100%;border-radius:6px;background:#000;box-shadow:0 20px 60px rgb(0 0 0 / .5)}
+.game .txt{display:grid;gap:12px}
+.game .go{color:var(--accent);font-weight:600;font-size:.95rem}
+@media (max-width:720px){.game{grid-template-columns:1fr}}
+
+/* footer */
+footer{margin-top:var(--gap);border-top:1px solid var(--rule);padding:44px 0 56px}
+footer .wrap{display:grid;gap:14px}
+
+/* reveal + lightbox */
+.js .reveal{opacity:0;transform:translateY(28px);transition:opacity .9s cubic-bezier(.16,1,.3,1),transform .9s cubic-bezier(.16,1,.3,1)}
+.js .reveal.in{opacity:1;transform:none}
+@media print{.js .reveal{opacity:1;transform:none}}
+.lb{position:fixed;inset:0;z-index:20;background:rgb(8 7 6 / .94);display:none;place-items:center;padding:4vw}
+.lb.open{display:grid}
+.lb img{max-width:100%;max-height:86vh;width:auto;border-radius:4px;box-shadow:0 30px 80px rgb(0 0 0 / .6)}
+.lb button{position:absolute;background:rgb(23 21 19 / .85);color:var(--ink);border:1px solid var(--rule);border-radius:999px;width:46px;height:46px;font-size:1.3rem;cursor:pointer}
+.lb .x{top:18px;right:18px}.lb .prev{left:18px;top:50%}.lb .next{right:18px;top:50%}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;scroll-behavior:auto!important}.js .reveal{opacity:1;transform:none}}
+</style>
+</head>
+<body>
+<nav aria-label="Main navigation"><div class="wrap">
+  <strong>Eyüp Enes Atasoy</strong>
+  <div class="links"><a href="#film">AI film</a><a href="#imagery">AI imagery</a><a href="#ads">Performance</a><a href="#automation">Automation</a><a href="#game">Game</a><a href="#contact">Contact</a></div>
+</div></nav>
+
+<header class="hero">
+  <img src="img/gd-h3-frame.jpg" alt="" width="1600" height="900" fetchpriority="high">
+  <div class="wrap">
+    <span class="eyebrow">AI creative · Performance marketing · Automation</span>
+    <h1>I make the visuals, run the ads, and build the tools in between.</h1>
+    <p class="lede">I'm Eyüp, based in Istanbul. I create film and product imagery with AI, run Meta and TikTok campaigns, and automate the work around them.</p>
+    <div class="chips"><span>Higgsfield</span><span>Nano Banana</span><span>ChatGPT Images</span><span>Veo</span><span>Photoshop</span><span>Figma</span><span>Premiere</span><span>Meta Ads</span><span>TikTok Ads</span><span>Python</span></div>
+    <div class="cta"><a class="btn primary" href="#film">See the work</a><a class="btn" href="mailto:eyup.atasoy95@gmail.com">Email me</a></div>
+  </div>
+</header>
+
+<main>
+<section id="film" class="wrap" aria-labelledby="film-h">
+  <div class="head">
+    <span class="eyebrow">AI film · 2026</span>
+    <h2 id="film-h">Grand Deceit: a documentary episode made with AI</h2>
+    <p class="muted">The story of the con man who "sold" the Eiffel Tower. I wrote the script, planned every shot, and made the visuals, AI voice-over and edit myself.</p>
+  </div>
+  <figure class="reel">
+    <video src="video/grand-deceit-reel.mp4" poster="img/gd-reel-poster.jpg" width="1280" height="720" autoplay muted loop playsinline controls preload="metadata" aria-label="Four animated shots from Grand Deceit"></video>
+    <figcaption>Four animated shots, 32 seconds, no sound</figcaption>
+  </figure>
+  <div class="film">
+    <figure class="f1"><img src="img/gd-s19.jpg" alt="Men in bowler hats looking up at the Eiffel Tower's iron lattice" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f2"><img src="img/gd-s04.jpg" alt="Hand with rings dealing cards by candlelight" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f3"><img src="img/gd-s13.jpg" alt="Typewriter with an embossed letter and a red wax seal" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f4"><img src="img/gd-s10.jpg" alt="Ocean liner at a busy 1920s dock" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f5"><img src="img/gd-s20.jpg" alt="Close-up of a man holding his hat, the tower behind him" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f6"><img src="img/gd-s25.jpg" alt="Rainy night street with neon signs" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f7"><img src="img/gd-s29.jpg" alt="Counterfeit notes hanging to dry under a bare bulb" width="1600" height="900" loading="lazy"></figure>
+    <figure class="f8"><img src="img/gd-s42.jpg" alt="The Eiffel Tower seen through a window in morning haze" width="1600" height="900" loading="lazy"></figure>
+  </div>
+  <p class="note after">Shot sheet first, then 46 stills in Higgsfield, animated shots, 12 voice-over segments and the final edit in Premiere. Full episode (about 12 minutes) on request.</p>
+
+  <div id="imagery" class="sub">
+    <div class="head">
+      <span class="eyebrow">AI imagery · concept, work in progress</span>
+      <h2 id="img-h">One character, many products</h2>
+      <p class="muted">A self-initiated homepage concept for a premium Istanbul hair salon brand with its own product line. All images and the hero video are AI-generated. The woman, the set and the light stay the same; only the products change.</p>
+    </div>
+    <figure class="reel">
+      <video src="video/salon-hero.mp4" poster="img/salon-hero-poster.jpg" width="1280" height="720" autoplay muted loop playsinline controls preload="metadata" aria-label="AI-generated hero video for the salon homepage concept"></video>
+      <figcaption>Hero video</figcaption>
+    </figure>
+    <div class="film">
+      <figure class="f7"><img src="img/salon-s1-bath.jpg" alt="The woman in a steaming stone bath, morning light through the window" width="1400" height="781" loading="lazy"></figure>
+      <figure class="f8"><img src="img/salon-s2-risen.jpg" alt="The woman standing in the bath in a robe, steam rising" width="1400" height="781" loading="lazy"></figure>
+      <figure class="f7"><img src="img/salon-s4-mirror.jpg" alt="Seen from behind, her soft reflection in the mirror" width="1400" height="781" loading="lazy"></figure>
+      <figure class="f8"><img src="img/salon-f09-wide.jpg" alt="Wide shot of the vanity with the full product range" width="1400" height="781" loading="lazy"></figure>
+    </div>
+    <div class="swap sub" data-swap>
+      <h3>Switch the category</h3>
+      <div class="swap-tabs" role="tablist" aria-label="Product category">
+        <button role="tab" aria-selected="false" tabindex="-1">Care</button>
+        <button role="tab" aria-selected="true">Color</button>
+        <button role="tab" aria-selected="false" tabindex="-1">Styling</button>
+        <button role="tab" aria-selected="false" tabindex="-1">Tools</button>
+        <button role="tab" aria-selected="false" tabindex="-1">Body</button>
+      </div>
+      <div class="swap-stage" role="tabpanel" aria-label="Product scene">
+        <img src="img/salon-f04-bakim.jpg" alt="Care products on the vanity next to the same woman" width="1400" height="782" loading="lazy">
+        <img class="on" src="img/salon-f05-renk.jpg" alt="Hair color tubes and a mixing bowl on the vanity" width="1400" height="782" loading="lazy">
+        <img src="img/salon-f06-sekillendirme.jpg" alt="Styling product jars on the vanity" width="1400" height="782" loading="lazy">
+        <img src="img/salon-f07-aletler.jpg" alt="Straightener and curling iron on the vanity" width="1400" height="782" loading="lazy">
+        <img src="img/salon-f08-vucut.jpg" alt="Body care products on the vanity" width="1400" height="782" loading="lazy">
+      </div>
+      <p class="note">I paste two fixed blocks into every prompt: one for the character, one for the style. That keeps the scenes consistent.</p>
+    </div>
+  </div>
+
+  <div class="principles"><span><b>Plan first.</b> Briefs and shot sheets before any generation.</span><span><b>Make it repeatable.</b> Prompts and references written down.</span><span><b>A person signs off.</b> I check every output before anyone sees it.</span></div>
+</section>
+
+<section id="ads" class="wrap" aria-labelledby="ads-h">
+  <div class="head">
+    <span class="eyebrow">Performance marketing · Aye Beauty, Istanbul · 2026</span>
+    <h2 id="ads-h">Where a beauty center's ad budget was going</h2>
+    <p class="muted">I've run their Meta ads since September 2026. First I pulled 13 months of account data through the Meta API and went through every campaign.</p>
+  </div>
+  <div class="stats">
+    <div class="stat"><b>443K TRY</b><small>13 months of spend audited</small></div>
+    <div class="stat bad"><b>53%</b><small>went to the wrong optimization goals</small></div>
+    <div class="stat bad"><b>5.3×</b><small>higher cost per conversation there</small></div>
+    <div class="stat good"><b>147 leads</b><small>at 200 TRY each after the rebuild</small></div>
+  </div>
+  <div class="bars" role="img" aria-label="Cost per conversation: 810 TRY on the wrong goals, 152 TRY when optimizing for conversations">
+    <div class="bar"><div class="lab"><span>Goal: profile visits, clicks, impressions · 234K TRY</span><span>810 TRY / conversation</span></div><div class="track"><div class="fill bad" style="width:100%">810</div></div></div>
+    <div class="bar"><div class="lab"><span>Goal: conversations · 209K TRY</span><span>152 TRY / conversation</span></div><div class="track"><div class="fill good" style="width:18.8%">152</div></div></div>
+  </div>
+  <ul class="points">
+    <li><span>Rebuilt the account in October and launched an instant-form lead campaign: 147 leads at 200 TRY each from 29.4K TRY in about three weeks.</span></li>
+    <li><span>Consolidated spend: a 500 TRY/day ad set paid 550 TRY per lead, a 1,500 TRY/day set 200 TRY. Creative and audience also differed.</span></li>
+    <li><span>Turned off Meta's automatic AI text edits, so the ads can't make health claims.</span></li>
+  </ul>
+  <div class="sub">
+    <h3>Offer-led creatives</h3>
+    <p class="note" style="margin-top:6px">I wrote the concept and brief; the client's content team produced them.</p>
+    <div class="cards">
+      <img src="img/aye-offer-1.jpg" alt="LPG transformation package card" width="640" height="800" loading="lazy">
+      <img src="img/aye-offer-2.jpg" alt="Vacu Active package card" width="640" height="800" loading="lazy">
+      <img src="img/aye-offer-3.jpg" alt="Lymphatic drainage package card" width="640" height="800" loading="lazy">
+      <img src="img/aye-offer-4.jpg" alt="Massage and detox package card" width="640" height="800" loading="lazy">
+      <img src="img/aye-offer-5.jpg" alt="Premium body transformation package card" width="640" height="800" loading="lazy">
+    </div>
+  </div>
+</section>
+
+<section id="automation" class="wrap" aria-labelledby="auto-h">
+  <div class="head">
+    <span class="eyebrow">Automation</span>
+    <h2 id="auto-h">A watcher for the ad account</h2>
+    <p class="muted">A Python service I designed and deployed. It reads the account, checks it against rules and posts alerts to the team's Telegram group.</p>
+  </div>
+  <div class="tool">
+    <div><h3>Money</h3><p class="muted">Spend without results, stopped delivery, the monthly budget cap.</p></div>
+    <div><h3>Leads</h3><p class="muted">Flags leads not called within an hour. On day one it found 17 waiting, the oldest for 30 hours.</p></div>
+    <div><h3>Reports</h3><p class="muted">Daily, weekly and monthly, with no personal data in the messages.</p></div>
+  </div>
+</section>
+
+<section id="game" class="wrap" aria-labelledby="game-h">
+  <div class="game">
+    <video src="video/rift-swarm-gameplay.mp4" poster="img/rift-poster.jpg" width="1280" height="628" autoplay muted loop playsinline preload="metadata" aria-label="Gameplay from the Rift Swarm prototype"></video>
+    <div class="txt">
+      <span class="eyebrow">Side project · game prototype</span>
+      <h2 id="game-h">Rift Swarm</h2>
+      <p class="muted">A co-op swarm game for Roblox. I designed the heroes, their skills and the game loop. We built this prototype in about a week, and it's still very early.</p>
+      <a class="go" href="https://github.com/EyupAtasoy/rift-swarm-showcase">Design notes →</a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer id="contact"><div class="wrap">
+  <h2>Let's talk</h2>
+  <p class="muted">Open to remote roles in AI creative, performance marketing and automation.</p>
+  <div class="cta"><a class="btn primary" href="mailto:eyup.atasoy95@gmail.com">eyup.atasoy95@gmail.com</a><a class="btn" href="https://www.linkedin.com/in/eyup-enes-atasoy/">LinkedIn</a></div>
+  <p class="note">Aye Beauty data shared with the business's permission. Source: Meta Marketing API.</p>
+</div></footer>
+
+<div class="lb" role="dialog" aria-modal="true" aria-label="Image viewer">
+  <button class="x" aria-label="Close">×</button>
+  <button class="prev" aria-label="Previous image">‹</button>
+  <img alt="">
+  <button class="next" aria-label="Next image">›</button>
+</div>
+
+<script>
+(function(){
+  var targets=document.querySelectorAll('.head, .reel, .film, .swap, .stats, .bars, .points, .cards, .tool, .game, .principles');
+  if('IntersectionObserver' in window){
+    targets.forEach(function(el){el.classList.add('reveal');});
+    var io=new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+    },{rootMargin:'0px 0px -8% 0px'});
+    targets.forEach(function(el){io.observe(el);});
+  } else {
+    document.documentElement.classList.remove('js');
+  }
+
+  document.querySelectorAll('[data-swap]').forEach(function(box){
+    var tabs=[].slice.call(box.querySelectorAll('[role=tab]')), imgs=box.querySelectorAll('.swap-stage img');
+    function show(i,focus){
+      tabs.forEach(function(t,k){t.setAttribute('aria-selected',k===i?'true':'false'); t.tabIndex=k===i?0:-1;});
+      imgs.forEach(function(im,k){im.classList.toggle('on',k===i);});
+      if(focus){tabs[i].focus();}
+    }
+    tabs.forEach(function(t,k){
+      t.addEventListener('click',function(){show(k);});
+      t.addEventListener('keydown',function(ev){
+        if(ev.key==='ArrowRight'||ev.key==='ArrowLeft'){
+          ev.preventDefault();
+          show((k+(ev.key==='ArrowRight'?1:tabs.length-1))%tabs.length,true);
+        }
+      });
+    });
+  });
+
+  var lb=document.querySelector('.lb'), lbImg=lb.querySelector('img');
+  var pics=[].slice.call(document.querySelectorAll('.film img')), cur=0, opener=null;
+  function open(i){cur=i; lbImg.src=pics[i].src; lbImg.alt=pics[i].alt; lb.classList.add('open'); document.body.classList.add('lock'); lb.querySelector('.x').focus();}
+  function close(){lb.classList.remove('open'); document.body.classList.remove('lock'); if(opener){opener.focus();}}
+  function step(d){open((cur+d+pics.length)%pics.length);}
+  pics.forEach(function(p,i){
+    var f=p.parentElement; f.tabIndex=0; f.setAttribute('role','button'); f.setAttribute('aria-label','Enlarge: '+p.alt);
+    f.addEventListener('click',function(){opener=f; open(i);});
+    f.addEventListener('keydown',function(ev){if(ev.key==='Enter'||ev.key===' '){ev.preventDefault(); opener=f; open(i);}});
+  });
+  lb.querySelector('.x').addEventListener('click',close);
+  lb.querySelector('.prev').addEventListener('click',function(){step(-1);});
+  lb.querySelector('.next').addEventListener('click',function(){step(1);});
+  lb.addEventListener('click',function(ev){if(ev.target===lb){close();}});
+  document.addEventListener('keydown',function(ev){
+    if(!lb.classList.contains('open')) return;
+    if(ev.key==='Escape') close(); else if(ev.key==='ArrowRight') step(1); else if(ev.key==='ArrowLeft') step(-1);
+    else if(ev.key==='Tab'){
+      var f=[].slice.call(lb.querySelectorAll('button')), a=document.activeElement, idx=f.indexOf(a);
+      ev.preventDefault(); f[(idx+(ev.shiftKey?f.length-1:1))%f.length].focus();
+    }
+  });
+})();
+</script>
+</body>
+</html>
